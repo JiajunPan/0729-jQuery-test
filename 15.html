@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-3.7.0.min.js"></script>
+    <script>
+        $(function (){
+            $("#btn").click(function (){
+                //children直接子元素
+                $("div").children("span").css("background","red");
+            });
+            $("#btn1").click(function (){
+                //find全部子元素
+                $("div").find("span").css("background","green");
+            });
+            $("#btn2").click(function (){//直接兄弟元素
+                $(".my").next().css("background","yellow");
+            });
+            $("#btn3").click(function (){//全部兄弟元素
+                $(".my").nextAll().css("background","blue");
+            });
+            $("#btn4").click(function (){//直接父级元素
+               $("#input1").parent().css("background","#21ABF6D8")
+            });
+            $("#btn5").click(function (){//所有父级元素
+                $("#input1").parents("div").css("background","#E71FD6D8")
+            });
+        });
+    </script>
+</head>
+<body>
+<p>Hello</p>
+<div>
+    <span>Hello Again</span>
+    <span>Hello Again</span>
+    <span>Hello Again</span>
+    <span>Hello Again</span>
+    <p>haha</p>
+    <p>hehe</p>
+    <p><span>1111</span></p>
+    <p><span>222</span></p>
+</div>
+<p>zzzzzz</p>
+<p class="my">And Again</p>
+<p>aaa</p>
+<p>bbb</p>
+<p>ccc</p>
+
+<div>
+    nihao
+    <div>
+        wohao
+        <input type="text" id="input1"/>
+    </div>
+</div>
+<input type="button" value="click me" id="btn">
+<input type="button" value="click me1" id="btn1">
+<input type="button" value="click me2" id="btn2">
+<input type="button" value="click me3" id="btn3">
+<input type="button" value="click me4" id="btn4">
+<input type="button" value="click me5" id="btn5">
+</body>
+</html>

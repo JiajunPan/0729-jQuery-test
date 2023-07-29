@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-3.7.0.min.js"></script>
+    <script>
+        function dian(){
+            //把要添加的html元素转换成jQuery元素
+           let $div=$("<div>nihao</div>");
+           //添加$(父元素).append(子元素的jQuery)父元素下子元素的最后一个位置
+           $(document.body).append($div);
+            let $p=$("<p>p biaoqian</p>");
+            $(document.body).prepend($p);//父元素下子元素的第一个位置
+            //子元素对象appendTo父元素的对象 或者prependTo
+            let $input=$("<input type='text' value='hh'/>");
+            $input.appendTo($(document.body));
+        }
+        function dian1(){
+            $("p").after($("<div>hello</div>>"));// 向每个 p 标签的后面插入 hello
+            $("p").before("<input type='button' value='test'/>");// 向每个 p 标签的前面插入
+            $("<input type='file' />").insertBefore($("p"));//将目标对象（obj）在插入到某个兄弟节点（brother）之前
+        }
+    </script>
+</head>
+<body>
+<p>I would like to say: </p>
+<p>I would like to say: </p>
+<p>I would like to say: </p>
+<input type="button" value="click me" onclick="dian()">
+<input type="button" value="click me1" onclick="dian1()">
+</body>
+</html>

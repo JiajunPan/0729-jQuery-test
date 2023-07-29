@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-3.7.0.min.js"></script>
+    <script>
+       $(function (){
+           $("#btnHide").click(function (){
+               //指定时长内隐藏，单位毫秒
+               $("img").hide(2000);
+           })
+           $("#btnShow").click(function (){
+               //指定时长内隐藏，单位毫秒
+               $("img").show(2000);
+           })
+           $("#btnToggle").click(function (){
+               //指定时长内隐藏，单位毫秒
+               $("img").toggle(2000);
+           })
+           $("#btnFadeIn").click(function (){
+               //指定时长内隐藏，单位毫秒
+               $("img").fadeIn(2000,function (){
+                   alert("fadein完成")
+               });
+           })
+           $("#btnFadeOut").click(function (){
+               //指定时长内隐藏，单位毫秒
+               $("img").fadeOut(2000,function (){
+                   alert("fadeout完成")
+               });
+           })
+           $("#btnFadeTo").click(function (){
+               //指定时长内隐藏，单位毫秒
+               $("img").fadeTo(2000,0.2,function (){
+                   alert("fadeto完成")
+               });
+           })
+           $("#btnFadeToggle").click(function (){
+               //指定时长内隐藏，单位毫秒
+               $("img").fadeToggle(2000,function (){
+                   alert("fadetoggle完成")
+               });
+           })
+           $("#btnSlideDown").click(function (){
+               //指定时长内隐藏，单位毫秒
+               $("img").slideDown(2000,function (){
+                   alert("slideDown完成")
+               });
+           })
+           $("#btnSlideUp").click(function (){
+               //指定时长内隐藏，单位毫秒
+               $("img").slideUp(2000,function (){
+                   alert("slideUp完成")
+               });
+           })
+           $("#btnSlideToggle").click(function (){
+               //指定时长内隐藏，单位毫秒
+               $("img").slideToggle(2000,function (){
+                   alert("slideToggle完成")
+               });
+           })
+       });
+
+
+
+    </script>
+</head>
+<body>
+<img src="img/2.png" alt="">
+<input type="button" value="图片隐藏" id="btnHide">
+<input type="button" value="图片显示" id="btnShow">
+<input type="button" value="图片toggle" id="btnToggle">
+<input type="button" value="图片fadein" id="btnFadeIn">
+<input type="button" value="图片fadeout" id="btnFadeOut">
+<input type="button" value="图片fadeto" id="btnFadeTo">
+<input type="button" value="图片fadetoggle" id="btnFadeToggle">
+<input type="button" value="图片SlideDown" id="btnSlideDown">
+<input type="button" value="图片SlideUp" id="btnSlideUp">
+<input type="button" value="图片SlideToggle" id="btnSlideToggle">
+</body>
+</html>

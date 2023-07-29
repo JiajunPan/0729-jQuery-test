@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-3.7.0.min.js"></script>
+    <script>
+$(function (){
+    $("#txt").focus(function (){
+        //$("#txt").css("background","red");
+        //或者\
+        $(this).css("background","red");//this指的是input元素的DOM对象，要想使用CSS函数必须转换成jQuery
+    });
+    $("#txt1").focusin(function (){
+        $(this).val("aaaaa");
+    });
+    $("#txt").blur(function (){
+        $(this.css("background",""));
+    });
+    $("#txt1").focusout(function (){
+        $(this).val("");
+    });
+    $("select[name='province']").change(function (){
+        alert($(this).val());
+    });
+    $("#btnSubmit").click(function (){
+        //提交表单submit函数
+            console.log("aaaaa");
+            $("#myForm").submit();
+
+    });
+    //提交触发事件
+    $("#myForm").submit(function (){
+        alert("submit被触发了");
+        //写业务判断数据检查是否通过，不通过return false会阻止表单提交
+        //return true 提交表单
+        return false;
+    })
+    //事件对象
+    $("#myBtn").click(function (){
+        console.log(event.currentTarget);
+        console.log(event.currentTarget===this);
+    });
+})
+    </script>
+</head>
+<body>
+<input type="button" id="myBtn" value="测试事件对象">
+<form action="/aa/bb/cc" method="get" id="myForm">
+    <input type="button" id="btnSubmit" value="提交"/>
+</form>
+<input type="text" id="txt">
+<input type="text" id="txt1">
+<select name="province">
+    <option value="天津">天津</option>
+    <option value="河北">河北</option>
+    <option value="山东">山东</option>
+    <option value="四川">四川</option>
+</select>
+</body>
+</html>

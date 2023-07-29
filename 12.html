@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="./js/jquery-3.7.0.min.js"></script>
+  <script>
+    //ready函数等待当前页面html元素全部加载完成之后再执行ready内函数
+    /*$(document).ready(function (){
+      $("#btn").on("click",function (){
+      $("div").css("background","red");
+      });
+    });*/
+    //简化执行ready
+    function my(){
+      $("div").css("background","red");
+    }
+    $(function (){
+      //也可以传值
+      $("#btn").on("click",{id:1},my);
+      $("#btn1").on("click",function (){
+        //解绑事件 函数要使用绑定事件函数名称
+        $('#btn').off('click',my);
+      })
+      //简写的事件方式
+      $("#btn2").click(function (){
+        $("div").css({'font-size':"50px","background":"green"})
+
+      })
+    });
+  </script>
+</head>
+<body>
+<div>111</div>
+<input type="button" value="click me" id="btn">
+<input type="button" value="解绑事件" id="btn1">
+<input type="button" value="事件简写" id="btn2">
+</body>
+
+</html>
