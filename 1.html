@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-3.7.0.min.js"></script>
+    <script>
+        function dian(){
+            $("li:first").css("background","red");
+        }
+        function dian1(){
+            $("li:not(:last)").css("background","blue");
+        }
+        function dian2() {
+            $("li:even").css("background", "green");
+        }
+            function dian3(){
+            //:header 选中h1~h6标签
+                $(":header").css("background","yellow");
+            }
+    </script>
+</head>
+<body>
+<ul>
+    <li>list item1</li>
+    <li>list item2</li>
+    <li>list item3</li>
+    <li>list item4</li>
+    <li>list item5</li>
+</ul>
+<input type="button" value="click me" onclick="dian()">
+<input type="button" value="click me1" onclick="dian1()">
+<input type="button" value="click me2" onclick="dian2()">
+<input type="button" value="click me3" onclick="dian3()">
+</body>
+</html>

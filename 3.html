@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-3.7.0.min.js"></script>
+    <script>
+        function dian(){
+            $("div:contains('15')").css("background","red");
+        }
+        function dian1(){
+            $("table td:empty").css("background","green");
+        }
+        function dian2() {
+            $("div:has(p)").css("background", "yellow");
+        }
+        function dian3(){
+            //:header 选中h1~h6标签
+            $("div:parent").css("background","blue");
+        }
+    </script>
+</head>
+<body>
+<div>156</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<table>
+    <tr><td>bianhao</td><td>xing ming</td></tr>
+    <tr><td>1</td><td>zhangsan</td></tr>
+    <tr><td></td><td>lisi</td></tr>
+</table>
+<div><p>hh</p></div>
+empty div:<div></div>
+<input type="button" value="click me" onclick="dian()">
+<input type="button" value="click me1" onclick="dian1()">
+<input type="button" value="click me2" onclick="dian2()">
+<input type="button" value="click me3" onclick="dian3()">
+
+</body>
+</html>

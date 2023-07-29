@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-3.7.0.min.js"></script>
+    <script>
+        function dian(){
+            //prop设置checked 为true或false展示选中和未选中效果
+            $(":checked").prop("checked",false);//<----属性没有双引号，注意！！！
+        }
+        function dian1(){
+            alert($(":selected").val());
+        }
+    </script>
+</head>
+<body>
+<form>
+    <input type="checkbox" name="newsletter" checked="checked" value="Daily"/>吃
+    <input type="checkbox" name="newsletter"  value="Weekly"/>喝
+    <input type="checkbox" name="newsletter" checked="checked" value="Monthly"/>玩
+    <select>
+        <option value="1">Flowers</option>
+        <option value="2" selected="selected">Gardens</option>
+        <option value="3">Trees</option>
+    </select>
+</form>
+<input type="button" value="click me" onclick="dian()">
+<input type="button" value="click me1" onclick="dian1()">
+</body>
+</html>

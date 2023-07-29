@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-3.7.0.min.js"></script>
+    <script>
+        function dian(){
+            $("ul li:nth-child(2)").css("background","red");
+        }
+        function dian1(){
+            $("ul li:nth-last-child(2)").css("background","green");
+        }
+        function dian2() {
+            $("ul li:first-child").css("background", "yellow");
+        }
+        function dian3(){
+            $("ul li:only-child").css("background","blue");
+        }
+    </script>
+</head>
+<body>
+<ul>
+    <li>list item1</li>
+    <li>list item2</li>
+    <li>list item3</li>
+    <li>list item4</li>
+    <li>list item5</li>
+</ul>
+<ul>
+    <li>list item1</li>
+    <li>list item2</li>
+    <li>list item3</li>
+    <li>list item4</li>
+</ul>
+<ul>
+    <li>list item1</li>
+</ul>
+<input type="button" value="click me" onclick="dian()">
+<input type="button" value="click me1" onclick="dian1()">
+<input type="button" value="click me2" onclick="dian2()">
+<input type="button" value="click me3" onclick="dian3()">
+</body>
+</html>
